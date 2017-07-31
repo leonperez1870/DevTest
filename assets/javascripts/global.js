@@ -97,12 +97,14 @@ $(document).ready(function() {
 					);
 			}
 
+			// Data Sorting
 			$(".data-segment").sort(function (a,b) {
 				return new Date($(a).attr("data-date")) > new Date($(b).attr("data-date"));
 			}).each(function() {
 				$(".items-grid").prepend(this);
 			});
 
+			// Filters
 			$('select').change(function() {
 				var filter = $(this).find("option:selected").val(),
 					div_instagram = $('div[service-name=Instagram]'),
