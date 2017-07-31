@@ -1,0 +1,9 @@
+@mixin breakpoint($point) {
+  @if $point == desktop-lg {
+    @media (min-width: $desktop-lg) { @content ; }
+  } @else if $point == desktop {
+    @media (min-width: $desktop) { @content ; }
+  } @else if $point == tablet {
+    @media (min-width: $tablet) { @content ; }
+  }
+}

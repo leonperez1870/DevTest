@@ -1,0 +1,75 @@
+.account-name {
+	background: $hashtag;
+	color: $white;
+	width: 50px;
+	padding: 20px 10px 5px 10px;
+	border-radius: 4px;
+	position: absolute;
+	top: -10px;
+	text-align: center;
+	&.fa-twitter {
+		background: $black;
+		padding: 20px 10px 5px 10px;
+		border-radius: 4px;
+	}
+	&.fa-instagram {
+		background: $black;
+		padding: 20px 10px 5px 10px;
+		border-radius: 4px;
+	}
+}
+
+.account-slug {
+	text-align: center;
+	margin-top: 2em;
+	color: $grey-dark;
+	&.instagram {
+		text-align: left;
+	}
+}
+
+.tweet {
+	text-align: center;
+	color: $grey-dark;
+	a {
+		color: $hashtag;
+		&:hover {
+			color: $maroon;
+			transition: 0.3s;
+			text-decoration: none;
+		}
+	}
+}
+
+.instagram-caption {
+	color: $grey-dark;
+	a {
+		color: $hashtag;
+		&:hover {
+			color: $maroon;
+			transition: 0.3s;
+			text-decoration: none;
+		}
+	}
+}
+
+.account-img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.item-data-text {
+	font-size: 1rem;
+	color: $grey;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.item-data-link {
+	color: $hashtag;
+	&:hover {
+		color: $maroon;
+		transition: 0.3s;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,144 @@
+html {
+  color: $grey-darker;
+  font-family: $main-font, sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+
+  &.highlighted {
+    color: $grey;
+  }
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+.section-title {
+  font-weight: 300;
+  margin-top: 1.5rem;
+  text-align: center;
+
+  & + .lead {
+    margin-top: -.5em;
+    text-align: center;
+  }
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+@include breakpoint(tablet) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+p,
+ul,
+ol,
+span,
+a {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+p {
+
+  &.lead {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(tablet) {
+      font-size: 1.4rem;
+    }
+  }
+
+  & + p {
+    margin-top: 1rem;
+  }
+}
+
+p,
+ul,
+ol {
+  > li {
+    margin-bottom: .5rem;
+  }
+}
+
+.check-list {
+  > li {
+    &::before {
+      background: url('../../images/icons/check-primary.svg') no-repeat left .25em;
+      background-size: .85em;
+      content: '';
+      display: inline-block;
+      height: .85em;
+      margin-right: .5em;
+      width: .85em;
+    }
+  }
+}
+
+a,
+.text-link {
+  color: $grey;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.truncated {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
