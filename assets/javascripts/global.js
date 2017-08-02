@@ -1,10 +1,15 @@
 $(document).ready(function() {
 
 	var div = $('.items-grid'),
-	json = $.getJSON("posts.json", function(data) {
-		// Ensure it works
-		console.log(data);
+	json = $.ajax({
+		url: 'posts.json',
+		async: false,
+		dataType: 'json',
+		success: function (response) {
+			console.log(response);
+		}
 	});
+
 
 	// Parsers
 	String.prototype.parseURL = function() {
@@ -131,17 +136,11 @@ $(document).ready(function() {
 		//Load More
 		var loadThis = $('.ui.segment');
 
-		loadThis.slice(0,9).show();
+		loadThis.slice(0,9).fadeIn();
 		
 		$("#loadMore").on('click', function(e) {
 			e.preventDefault();
-			$('.ui.segment:hidden').slice(0,3).show();
+			$('.ui.segment:hidden').slice(0,3).fadeIn();
 		});
-
-		$(window).scroll(function() {
-			if ($(window).scrollTop() >= $(document).height() - 10) {
-				$('.ui.segment:hidden').slice(0,3).show();
-			}
-		})
 	});		
 });
