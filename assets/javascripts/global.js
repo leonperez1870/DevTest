@@ -33,9 +33,6 @@ $(document).ready(function() {
 			return t.link("http://instagram.com/tags/"+tag);
 		});
 	};
-
-
-	$('.data-segment').infiniteScroll();
 	
 	// Load JSON
 	json.done(function( data ) {
@@ -129,7 +126,22 @@ $(document).ready(function() {
 					div_posts.show();
 				}
 			});
-
 		});
-	});
+
+		//Load More
+		var loadThis = $('.ui.segment');
+
+		loadThis.slice(0,9).show();
+		
+		$("#loadMore").on('click', function(e) {
+			e.preventDefault();
+			$('.ui.segment:hidden').slice(0,3).show();
+		});
+
+		$(window).scroll(function() {
+			if ($(window).scrollTop() >= $(document).height() - 10) {
+				$('.ui.segment:hidden').slice(0,3).show();
+			}
+		})
+	});		
 });
